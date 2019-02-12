@@ -24,5 +24,15 @@ namespace EventsApp
         {
             InitializeComponent();
         }
+
+        private void TextBox1_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragDrop.DoDragDrop(textBox1, textBox1.Text, DragDropEffects.Copy);
+        }
+
+        private void Button1_Drop(object sender, DragEventArgs e)
+        {
+            button1.Content = e.Data.GetData(DataFormats.Text);
+        }
     }
 }

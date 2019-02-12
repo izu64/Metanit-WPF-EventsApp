@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EventsApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="250" Width="400">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <DockPanel>
+            <TextBox x:Name="textBox1" MouseDown="TextBox1_MouseDown" />
+        </DockPanel>
+
+        <Button x:Name="button1" Grid.Row="1" AllowDrop="True" Drop="Button1_Drop" />
     </Grid>
 </Window>
